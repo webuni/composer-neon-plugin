@@ -1,0 +1,46 @@
+{
+    "name": "webuni/composer-neon-plugin",
+    "description": "Composer plugin to convert a composer.neon to json or vice-versa.",
+    "type": "composer-plugin",
+    "keywords": [
+        "composer",
+        "neon"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Martin Hasoň",
+            "email": "martin.hason@gmail.com"
+        },
+        {
+            "name": "Webuni s.r.o.",
+            "homepage": "https://www.webuni.cz"
+        }
+    ],
+    "require": {
+        "php": "^5.5 || ^7.0",
+        "nette/neon": "^2.2 || ^3.0",
+        "composer-plugin-api": "^1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8 || ^5.4 || ^6.0",
+        "symfony/var-dumper": "^3.0",
+        "friendsofphp/php-cs-fixer": "^2.0",
+        "composer/composer": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Webuni\\ComposerNeonPlugin\\": "src"
+        }
+    },
+    "scripts": {
+        "cs": "vendor/bin/php-cs-fixer fix",
+        "tests": "vendor/bin/phpunit --colors=always"
+    },
+    "extra": {
+        "class": "Webuni\\ComposerNeonPlugin\\Plugin",
+        "branch-alias": {
+            "dev-master": "1.1-dev"
+        }
+    }
+}
